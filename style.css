@@ -7,13 +7,15 @@
 html {
     scroll-behavior: smooth; 
 }
-
 body {
     font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    color: #fff; 
-    background: #121212;
+    -webkit-text-fill-color: inherit;
+    mix-blend-mode: normal;
+    background-color: #000;
+    background-image: repeating-radial-gradient(circle, #000, #ff00a100 24%, #0000 53%, #d404f42e);
+    background-clip: border-box;
 }
+
 
 .loading-screen {
     position: fixed;
@@ -118,10 +120,7 @@ header {
 .intro {
     position: relative;
     z-index: 2;
-    background: linear-gradient(to right,  #6a11cb, #2575fc);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color:#ffffff;
     padding: 70px;
     border-radius: 10px;
     overflow: hidden;
@@ -176,14 +175,14 @@ header {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    background: #1e1e1e; 
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(147, 147, 147, 0.5);
     margin-bottom: 10px;
+    border: 2px solid #d404f42e;
+    box-shadow: 0 5px 5px #d404f42e;
 }
 
 .about h2 {
@@ -209,11 +208,11 @@ header {
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
-    flex-wrap: wrap; /* Ensure skills wrap on smaller screens */
+    flex-wrap: wrap; 
 }
 
 .skills span {
-    background: #01292e;
+    background: #d404f42e;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 25px;
@@ -266,7 +265,6 @@ header {
 
 .portfolio {
     padding: 5rem 2rem;
-    background: #121212; 
 }
 
 .portfolio h2 {
@@ -360,8 +358,8 @@ header {
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #3498db; 
-    text-shadow:0 0 10px #77e2f0;
+    border: 1px solid #ffff; 
+    text-shadow:0 0 10px #dd00ff;
 }
 
 .project-card:hover {
@@ -392,10 +390,10 @@ header {
 
 .education {
     padding: 5rem 2rem;
-    background: #1e1e1e; 
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 2rem 0;
+    margin-left: 20%;
+    margin-right:20%;
 }
 
 .education h2 {
@@ -413,10 +411,13 @@ header {
 }
 
 .education-item {
-    background: #333333;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(40px); 
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 4px rgba(147, 147, 147, 0.5);
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .education-item h3 {
     font-size: 1.5rem;
@@ -435,8 +436,7 @@ header {
     padding: 2rem;
     column-rule-color: rgb(50, 124, 243);
     color: #ffffff;
-    border-radius: 10px;
-    background: #1e1e1e; 
+    border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -571,13 +571,10 @@ header {
 }
 
 footer {
-    background: #121212;
     color: #fff;
     padding: 3rem 2rem;
     text-align: center;
 }
 footer p4{
     color:#6a6a6a;
-    margin-top: 10%;
-    
 }
